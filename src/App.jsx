@@ -1,8 +1,15 @@
+import React from "react";
+import Header from "./Components/Header";
+import Main from "./Components/Main";
 function App() {
-  return 
-  <div>
-    <h1 className="text-center text-4xl my-20">MOVIEGALLERY TEXUS</h1>
-  </div>;
+  return(
+      <div className="body">
+
+     <Header/>
+    <Main/>
+
+  </div>
+  );
 }
 
 export default App;
