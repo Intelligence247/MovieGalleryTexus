@@ -1,0 +1,28 @@
+
+header{
+    background-image: linear-gradient(115deg, rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(/media/imghead.png);
+    @apply text-white lg:px-20 px-2 lg:pt-20 pt-[8vh] relative
+}
+.saka{
+    @apply w-screen h-8 absolute bottom-0 bg-[#121212] left-0 z-[-1]
+}
+.find{
+    @apply flex justify-between items-baseline
+}
+.find h1{
+    @apply lg:text-[2.5rem] font-[800] text-[1.2rem]
+}
+
+
+
+.inputs{
+
+    @apply flex h-10 w-full bg-[#2E2E2F] items-center gap-2 px-8 rounded-lg mt-[10vh]
+
+}
+input{
+    @apply bg-[#2E2E2F] w-full focus:outline-none border-none
+}
+.inputs img{
+    @apply w-4 h-4 
+}
