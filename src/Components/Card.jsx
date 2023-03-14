@@ -14,7 +14,7 @@ const Card = (props) => {
                     <ul className='card--list-two'>
                         <li>{props.period}</li>
                         <li>{props.type}</li>
-                        <li className='watch'> <span>+</span> Watchlist</li>
+                        <li className='watch'><span>+</span> Watchlist</li>
                     </ul>
                     <p className ="card--final-text">{props.desc}<span>Read more</span></p>
         
