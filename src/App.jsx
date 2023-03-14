@@ -1,13 +1,11 @@
 import React from "react";
 import Header from "./Components/Header";
 import Main from "./Components/Main";
-import Card from "./Components/Card";
 function App() {
   return(
       <div className="body">
 
      <Header/>
-     <Card/>
     <Main/>
 
   </div>
@@ -15,3 +13,6 @@ function App() {
 }
 
 export default App;
+
+
+// https://www.figma.com/file/jhFRdFIdHpRxsDznNXtpXw/Watchlist-Creator?node-id=2%3A17

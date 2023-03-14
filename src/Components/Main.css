@@ -1,3 +1,4 @@
 main{
-    @apply bg-[#121212] h-[auto] overflow-y-auto
-}
+    grid-template-columns: 1fr 1fr;
+    @apply bg-[#121212] h-[auto] overflow-y-auto  w-screen max-w-full lg:grid px-10 pt-10
+} 

@@ -1,27 +1,23 @@
-body {
-    background-color: #121212;
+*{
+    @apply lg:text-base text-sm
 }
-
 .container {
-    padding: 2em 2em 2em 5em;
-    width: 80%;
-    margin: 0;
-}
+    padding: 1rem 0rem 1rem 0rem;
+} 
 
 .card {
-    display: flex;
-    width: 600px;
-    justify-content: space-between;
-    padding-bottom: 2em;
     border-bottom: 0.2em #2C2C2C solid;
+    @apply flex pb-[1rem] lg:w-[37.5rem] w-full justify-between lg:min-h-[14rem]
 }
 
 .card--img {
     max-width: 100%;
-    height: 100%;
     width: 22%;
+    
+} 
+.card--img img{
+    @apply h-full w-[22%]
 }
-
 .col {
     width: 100%;
 }
@@ -29,6 +25,7 @@ body {
 .card--body {
     width: 72%;
     max-width: 100%;
+    @apply flex flex-wrap
 
 }
 
@@ -38,16 +35,12 @@ body {
 }
 
 .card--list-two {
-    text-decoration: none;
-    list-style: none;
-    margin-top: 1em;
-    color: #fff;
+    @apply flex align-baseline justify-between text-white flex-wrap 
 
 }
 
 .card--list-two li {
-    display: inline-block;
-    padding-right: 1.0em;
+    @apply lg:text-base text-[10px] lg:pr-[.3rem]  pr-0
 }
 
 .icon {
@@ -56,14 +49,12 @@ body {
 }
 
 .card--title-head {
-    margin-top: 1.2em;
-    font-size: larger;
     color: #fff;
+    @apply lg:text-[larger] text-sm 
 }
 
 .card--final-text {
-    margin-top: 1em;
-    color: #A5A5A5;
+    @apply text-[#A5A5A5] lg:text-base text-[10px] lg:leading-normal leading-tight
 }
 
 .card--num {
@@ -72,9 +63,15 @@ body {
 }
 
 ul span {
-    color: black;
+   color: black;
     border-radius: 50%;
-    font-weight: bolder;
-    padding: 0 0.2em;
+       font-weight: bolder;
     background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @apply lg:h-[1.2rem] lg:w-[1.2rem] w-[1rem] h-[1rem]
+}
+ul .watch{
+    @apply flex gap-2 justify-center items-baseline
 }

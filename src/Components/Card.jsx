@@ -1,23 +1,22 @@
 import React from 'react'
-
-const Card = () => {
+import "./Card.css"
+const Card = (props) => {
   return (
     <div className="container">
             <div className="card">
-                <img className="card--img" src="./media/img2.png" alt="" />
+                <img className="card--img" src={props.img} alt="" />
                 <div className="card--body">
                     <ul className='card--list-one'>
-                        <li className="card--title-head">Blade Runner 2049</li>
+                        <li className="card--title-head">{props.title}</li>
                         <li><img className="icon" src="./media/Icon.png" alt="" /></li>
-                        <li className="card--num">8.0 </li>
+                        <li className="card--num">{props.version}</li>
                     </ul>
                     <ul className='card--list-two'>
-                        <li>164 min</li>
-                        <li>Action, Drama,Mystery</li>
-                        <li><span>+</span> Watchlist</li>
+                        <li>{props.period}</li>
+                        <li>{props.type}</li>
+                        <li className='watch'> <span>+</span> Watchlist</li>
                     </ul>
-                    <p class="card--final-text">Young Blade Runner K's discovery of a long-buried secret leads him to track down
-                        former Blade Runner Rick Deckard, who's been missing...Read more</p>
+                    <p className ="card--final-text">{props.desc}<span>Read more</span></p>
         
                 </div>
             </div>
