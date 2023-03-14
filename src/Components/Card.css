@@ -11,8 +11,7 @@
 }
 
 .card--img {
-    max-width: 100%;
-    width: 22%;
+    @apply w-[22%] max-w-full
     
     
 } 
@@ -20,12 +19,10 @@
     @apply h-full w-[22%] 
 }
 .col {
-    width: 100%;
+ @apply w-full
 }
 
 .card--body {
-    /* width: 72%; */
-    /* max-width: 100%; */
     @apply flex flex-wrap gap-2
 
 }
@@ -45,13 +42,11 @@
 }
 
 .icon {
-    max-width: 100%;
-    width: auto;
+       @apply w-auto max-w-full
 }
 
 .card--title-head {
-    color: #fff;
-    @apply lg:text-[larger] text-sm 
+    @apply lg:text-[larger] text-sm text-white
 }
 
 .card--final-text {
@@ -59,19 +54,11 @@
 }
 
 .card--num {
-    font-size: 12px;
-    color: #fff;
+        @apply text-white text-[12px]
 }
 
 ul span {
-   color: black;
-    border-radius: 50%;
-       font-weight: bolder;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @apply lg:h-[1.2rem] lg:w-[1.2rem] w-[1rem] h-[1rem]
+       @apply lg:h-[1.2rem] lg:w-[1.2rem] w-[1rem] h-[1rem] bg-white font-[900] text-black rounded-full flex items-center justify-center
 }
 ul .watch{
     @apply flex gap-2 justify-center items-baseline
