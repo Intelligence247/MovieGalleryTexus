@@ -1,0 +1,65 @@
+*{
+    @apply lg:text-base text-sm m-0 p-0 box-border
+}
+.container {
+    padding: 1rem 0rem 1rem 0rem;
+} 
+
+.card {
+    border-bottom: 0.2em #2C2C2C solid;
+    @apply flex pb-[1rem] lg:w-[37.5rem] w-full lg:gap-8 gap-2
+}
+
+.card--img {
+    @apply w-[22%] max-w-full
+    
+    
+} 
+.card--img img{
+    @apply h-full w-[22%] 
+}
+.col {
+ @apply w-full
+}
+
+.card--body {
+    @apply flex flex-wrap gap-2
+
+}
+
+.card--list-one li {
+    display: inline-block;
+    padding-right: 0.5em;
+}
+
+.card--list-two {
+    @apply flex align-baseline justify-between text-white flex-wrap 
+
+}
+
+.card--list-two li {
+    @apply lg:text-base text-[10px] lg:pr-[.3rem]  pr-0
+}
+
+.icon {
+       @apply w-auto max-w-full
+}
+
+.card--title-head {
+    @apply lg:text-[larger] text-sm text-white
+}
+
+.card--final-text {
+    @apply text-[#A5A5A5] lg:text-base text-[10px] lg:leading-normal leading-tight
+}
+
+.card--num {
+        @apply text-white text-[12px]
+}
+
+ul span {
+       @apply lg:h-[1.2rem] lg:w-[1.2rem] w-[1rem] h-[1rem] bg-white font-[900] text-black rounded-full flex items-center justify-center
+}
+ul .watch{
+    @apply flex gap-2 justify-center items-baseline
+}
