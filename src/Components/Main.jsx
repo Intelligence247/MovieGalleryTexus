@@ -1,54 +1,47 @@
 import React from "react";
 import Card from "./Card";
 import "./Main.css";
+import { useEffect, useState } from "react";
 
+const API_URL = "http://www.omdbapi.com/?apikey=ca21ac3d";
 
-const Main = () => {
-  
-  const contentArr = [
-    {
-      img: "./media/img1.png",
-      title: "Blade Runner",
-      period: "116 min",
-      type: "Drama, Mystery, Sci-fi",
-      desc: "A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.",
-      version: "8.1",
-    },
+const Main = ({ searchResults }) => {
+  const [contentArr, setContentArr] = useState([]);
 
-    {
-      img: "./media/img2.png",
-      title: "Blade Runner 2049",
-      period: "164 min",
-      type: "Action, Drama,Mystery",
-      desc: "Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing...",
-      version: "8.0",
-    },
+  const fetchApidata = async (title) => {
+    const response = await fetch(`${API_URL}&s=${title}`);
+    const data = await response.json();
 
-    {
-      img: "./media/img3.png",
-      title: "Blade Runner Black Out 2022",
-      period: "15 min",
-      type: "Drama, Mystery, Sci-fi",
-      desc: "In 2022, a powerful weapon causes a global blackout that has massive implications all over the world.",
-      version: "7.3",
-    },
-  ];
+    if (data.Response === "True") {
+      setContentArr(data.Search);
+    } else {
+      setContentArr([]);
+    }
+
+  };
+
+  useEffect(() => {
+    if (searchResults) {
+      fetchApidata(searchResults);
+    } else {
+      fetchApidata("Black Panther")
+    }
+  }, [searchResults]);
 
   return (
     <main>
-      {contentArr.map((content, i) => (
+      {contentArr.map((content) => (
         <Card
-          key={i}
-          img={content.img}
-          title={content.title}
-          period={content.period}
-          type={content.type}
-          desc={content.desc}
-          version={content.version}
+          img={content.Poster}
+          title={content.Title}
+          period={content.Year}
+          type={content.Type}
+          version="NULL"
         />
       ))}
     </main>
   );
 };
+
 
 export default Main;
