@@ -11,7 +11,7 @@ const Card = (props) => {
             <li>
               <img className="icon" src="./media/Icon.png" alt="" />
             </li>
-            <li className="card--num">{props.version}</li>
+            {/* <li className="card--num">{props.version}</li> */}
           </ul>
           <ul className="card--list-two">
             <li>{props.period}</li>
