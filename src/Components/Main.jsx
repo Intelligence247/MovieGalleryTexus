@@ -3,7 +3,7 @@ import Card from "./Card";
 import "./Main.css";
 import { useEffect, useState } from "react";
 
-const API_URL = "http://www.omdbapi.com/?apikey=ca21ac3d";
+const API_URL = "https://www.omdbapi.com/?apikey=ca21ac3d";
 
 const Main = ({ searchResults }) => {
   const [contentArr, setContentArr] = useState([]);
