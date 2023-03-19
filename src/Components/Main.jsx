@@ -36,7 +36,6 @@ const Main = ({ searchResults }) => {
           title={content.Title}
           period={content.Year}
           type={content.Type}
-          version="NULL"
         />
       ))}
     </main>
